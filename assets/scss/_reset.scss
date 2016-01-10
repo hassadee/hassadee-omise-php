@@ -1,0 +1,26 @@
+/*--------------------------------------------------------------------
+ * Copyright (c) 2014, Hassadee Pimsuwan. All rights reserved.
+ * Author: Hassadee Pimsuwan
+ *------------------------------------------------------------------*/
+
+a,
+a:active,
+a:focus,
+a:hover {
+	color: $black;
+	outline: none;
+	text-decoration: none;
+}
+
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section {
+	display: block;
+}

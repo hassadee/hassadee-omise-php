@@ -1,0 +1,12 @@
+$path:  "../fonts/";
+
+@font-face {
+    font-family: 'thaisans_neueregular';
+    src: url('#{$path}thaisansneue-regular-webfont.eot');
+    src: url('#{$path}thaisansneue-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$path}thaisansneue-regular-webfont.woff2') format('woff2'),
+         url('#{$path}thaisansneue-regular-webfont.woff') format('woff'),
+         url('#{$path}thaisansneue-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

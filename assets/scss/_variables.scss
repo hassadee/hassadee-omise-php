@@ -1,0 +1,82 @@
+/*--------------------------------------------------------------------
+ * Copyright (c) 2015, Hassadee Pimsuwan. All rights reserved.
+ * Author: Hassadee Pimsuwan
+ *------------------------------------------------------------------*/
+ 
+
+$translucent-white: rgba(255, 255, 255, 0.5);
+$translucent-black: rgba(0, 0, 0, 0.75);
+
+$hover-color:	#EEEEEE;
+
+$lightblue:		#1BBC9B;
+$green:         #9BC148;
+$white:         #FFFFFF;
+$whitegray:		#FDFDFD;
+$darkwhite:		#F4F4F4;
+$black:         #000000;
+$lightblack:   	#333333;
+$blue:          #33B4E4;
+$yellow:		#FFD900;
+$darkgrey:		#494C50;
+
+$border-color:	#E5E5E5;
+
+
+/* Flat UI Kit
+Source: designmodo.github.io/Flat-UI/
+-------------------------------------------------- */
+$turquoise:			#1ABC9C;
+$turquoise-hover:	#2FE2BF;
+$greensea:			#16A085;
+$emerald:			#2ECC71;
+$nephritis:			#27AE60;
+$peterriver:		#3498D8;
+$belizehole:		#2980B9;
+$amethyst:			#9B59B6;
+$wisteria:			#8E44AD;
+$wetasphalt:		#34495E;
+$midnightblue:		#2C3E50;
+$sunflower:			#F1C40F;
+$orange:			#F39C12;
+$carrot:			#E67E22;
+$pumpkin:			#D35400;
+$alizarin:			#E74C3C;
+$pomegranate:		#C0392B;
+$clouds:			#ECF0F1;
+$silver:			#BDC3C7;
+$concrete:			#95A5A6;
+$asbestos:			#7F8C8D;
+
+
+/* Viget
+http://viget.com/inspire/naming-colors
+-------------------------------------------------- */
+$indigo:	#0D3D56;
+$sophia:	#0F5B78;
+$skye:		#117899;
+$alice:		#1496BB;
+$jade:		#5CA794;
+$kelly:		#50B121;
+$daisy:		#EBC944;
+$amber:		#EDAA38;
+$april:		#F08C2D;
+$coral:		#F26D21;
+$rowan:		#D94E20;
+$ruby:		#C02F1D;
+$jet:		#131516;
+$raven:		#373D3F;
+$asher:		#555F61;
+$stone:		#707C80;
+$gray:		#8C979A;
+$sterling:	#A7B0B2;
+$heather:	#C1C7C9;
+$pearl:		#DADEDF;
+$lilia:		#F2F3F4;
+
+
+/* Hassadee Payment Form Variables
+-------------------------------------------------- */
+$payment-form-button-color:			$lightblue;
+$payment-form-button-color-hover:	lighten($lightblue, 5%);
+$payment-form-button-color-border:	darken($lightblue, 5%);

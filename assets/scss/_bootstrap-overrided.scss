@@ -1,0 +1,141 @@
+/*--------------------------------------------------------------------
+ * Copyright (c) 2015, Hassadee Pimsuwan. All rights reserved.
+ *------------------------------------------------------------------*/
+
+.container-fluid {
+	padding: 0;
+}
+
+.glyphicon {
+	font-size: 16px;
+	top: 3px;
+}
+
+/* Start: Navbar Section
+-------------------------------------------------- */
+.navbar {
+	@include box-shadow-default();
+	margin-bottom: 0;
+}
+
+.navbar-brand,
+.navbar-inverse .navbar-brand {
+	color: $white;
+	font-size: 38px;
+}
+
+.nav > li > a {
+	border-top: 3px solid transparent;
+	border-bottom: 3px solid transparent;
+	padding: 10px 25px;
+}
+
+.navbar-default {
+	background: $white;
+	min-height: 100px;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:focus {
+	background: transparent;
+	border-top: 3px solid transparent;
+	border-bottom: 3px solid transparent;
+	color: $black;
+	letter-spacing: 1px;
+}
+
+.navbar-collapse {
+	padding: 0;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:active,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+	background: transparent;
+	border-top: 3px solid transparent;
+	color: $black;
+}
+
+.navbar-nav {
+	margin: 5px 0;
+	padding: 25px 0;
+}
+
+.navbar-header {
+	min-height: 100px;
+}
+/* End: Navbar Section
+-------------------------------------------------- */
+
+.modal-header .close {
+	margin-top: 4px;
+}
+
+.modal-content {
+	@include border-radius(0);
+}
+
+.modal-body {
+	padding: 0;
+}
+
+.modal-header {
+	.modal-title {
+		color: $black;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.carousel-caption {
+	h3,
+	h4 {
+		color: $white;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+	margin: 0 auto;
+	text-align: center;
+}
+
+blockquote {
+	border: 0;
+}
+
+legend {
+	font-size: 22px;
+}
+
+.form-control,
+.input-group-addon {
+	font-size: 18px;
+}
+
+.btn {
+	font-size: 18px;
+}
+
+.panel-title {
+	font-size: 22px;
+}
+
+.dropdown-menu {
+	font-size: 18px;
+}
+
+.form-control {
+	box-shadow: 0;
+}
+
+@media only screen and (max-width: 360px) {
+	.navbar-brand,
+	.navbar-inverse .navbar-brand {
+		font-size: 30px;
+	}
+}

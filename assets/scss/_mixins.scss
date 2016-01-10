@@ -1,0 +1,58 @@
+/*--------------------------------------------------------------------
+ * Copyright (c) 2013-2014, Hassadee Pimsuwan. All rights reserved.
+ * Author: Hassadee Pimsuwan
+ *------------------------------------------------------------------*/
+ 
+
+@mixin width-calc($parems) {
+	width: -webkit-calc($parems);
+	width: -moz-calc($parems);
+	width: calc($parems);
+}
+
+@mixin height-calc($parems) {
+	height: -webkit-calc($parems);
+	height: -moz-calc($paream);
+	height: calc($parems);
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
+	border-radius: $radius;
+}
+
+// @mixin border-top-radius($radius) {
+// 	-webkit-top-border-radius: $radius;
+// 	-moz-top-border-radius: $radius;
+// 	-ms-top-border-radius: $radius;
+// 	-o-top-border-radius: $radius;
+// 	border-top-radius: $radius;
+// }
+
+@mixin transform-translate3d($x, $y, $z) {
+	-webkit-transform:	translate3d($x, $y, $z);
+	-moz-transform:		translate3d($x, $y, $z);
+	-ms-transform:		translate3d($x, $y, $z);
+	-o-transform:		translate3d($x, $y, $z);
+	transform:			translate3d($x, $y, $z);
+}
+
+@mixin clearfix() {
+	content: " ";
+	clear: both;
+	display: block;
+	font-size: 0;
+}
+
+@mixin border-default() {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+}
+
+@mixin box-shadow-default() {
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1), 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+}

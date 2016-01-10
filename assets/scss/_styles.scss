@@ -1,0 +1,251 @@
+/*--------------------------------------------------------------------
+ * Hassadee Payment Form
+ * Copyright (c) 2015, Hassadee Pimsuwan. All rights reserved.
+ *------------------------------------------------------------------*/
+
+
+/* Global
+-------------------------------------------------- */
+body, input, button, select, textarea, label {
+    color: $lightblack;
+	font-family: thaisans_neueregular;
+	font-size: 20px;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+/* Heading
+-------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+	color: $lightblack;
+	font-family: thaisans_neueregular;
+	font-weight: 300;
+	margin: 15px 0;
+	padding: 15px 0;
+	letter-spacing: 1px;
+	line-height: 100%;
+}
+
+h1 { font-size: 54px; }
+h2 {
+	font-size: 38px;
+	font-weight: 100;
+}
+h3 { font-size: 28px; }
+h4 { font-size: 26px; }
+h5 { font-size: 24px; }
+h6 { font-size: 22px; }
+
+p {
+	font-family: thaisans_neueregular;
+	font-size: 20px;
+	margin: 10px 0 20px;
+}
+
+
+/* Body and structure
+-------------------------------------------------- */
+html,
+body {
+	margin: 0;
+	overflow-x: hidden;
+	padding: 0;
+}
+
+body {
+	background: $white;
+	min-height: 100%;
+}
+
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+}
+
+a,
+ul,
+ol,
+li,
+ul > li:before,
+ul > li:after {
+	list-style-type: none;
+}
+
+img {
+	border: 0 none;
+	vertical-align: middle;
+	max-width: 100%;
+	height: auto;
+}
+
+figure {
+	margin: 0;
+}
+
+figcaption * {
+	padding: 0 10px;
+	margin: 0;
+}
+
+figcaption *:first-child {
+	padding-top: 5px;
+}
+figcaption *:last-child {
+	padding-bottom: 5px;
+}
+
+/* Floating and Positioning
+-------------------------------------------------- */
+.flt-left {
+	float: left;
+}
+.flt-right {
+	float: right;
+}
+
+/* Hassadee Payment Form Styles
+-------------------------------------------------- */
+.remark {
+	border-top: 1px solid $pearl;
+	color: $stone;
+	font-size: 18px;
+	margin: 15px 0;
+	padding: 15px 0;
+	.remark-list {
+		text-align: center;
+		.remark-list-item {
+			margin: 1px auto;
+		}
+	}
+}
+
+.payment-form-container {
+	background: $white;
+	@include border-default();
+	@include border-radius(8px);
+	@include box-shadow-default();
+	display: block;
+	position: relative;
+	margin: 15px auto;
+	padding: 0;
+	width: 290px;
+	.payment-form-group {
+		display: block;
+		margin: 0 0 10px 0;
+		&:after {
+			@include clearfix();
+		}
+	}
+	.payment-form-header {
+		background: $blue;
+		@include border-radius(8px 8px 0 0);
+		color: $white;
+		display: block;
+		padding: 15px;
+		width: 100%;
+		height: 80px;
+		.payment-form-headline-container {
+			display: inline-block;
+			.payment-form-headline-text {
+				color: $white;
+				font-size: 28px;
+				line-height: 20px;
+				margin: 5px 0;
+				padding: 0 5px;
+				text-transform: uppercase;
+			}
+		}
+		.payment-form-logo-container {
+			display: inline-block;
+			float: right;
+			font-size: 0;
+			vertical-align: middle;
+			width: 100px;
+			height: 100%;
+			&:before {
+			    content: ' ';
+			    display: inline-block;
+			    vertical-align: middle;
+			    height: 100%;
+			}
+		}
+		&:after {
+			@include clearfix();
+		}
+	}
+	.payment-form {
+		padding: 15px;
+		.payment-form-input-addon {
+			background: transparent;
+			border: 0;
+			@include border-radius(3px 0 0 3px);
+			padding: 4px 0 6px 12px;
+			position: absolute;
+			width: 30px;
+			height: 40px;
+			z-index: 3;
+			.glyphicon {
+				top: 6px;
+			}
+			.payment-form-input-addon-icon {
+				max-height: 15px;
+			}
+		}
+		.payment-form-expiry {
+			display: block;
+			float: left;
+			margin: 0 10px 10px 0;
+			width: 143px;
+			.payment-form-input {
+				display: inline;
+				float: left;
+				text-align: center;
+				width: 62px;
+			}
+			.payment-form-input-expiry-month {
+				border-right: 0;
+				@include border-radius(3px 0 0 3px);
+				width: 82px;
+			}
+			.payment-form-input-expiry-year {
+				@include border-radius(0 3px 3px 0);
+				padding: 10px 12px;
+				width: 61px;
+			}
+		}
+		.payment-form-security-code {
+			display: inline-block;
+			float: left;
+			width: 105px;
+			&:after {
+				@include clearfix();
+			}
+		}
+	}
+	.payment-form-input {
+		@include border-radius(4px);
+		font-size: 20px;
+		padding: 10px 12px 10px 35px;
+		height: 40px;
+	}
+	.payment-form-label {
+		display: block;
+		margin: 5px 0;
+		max-width: 100%;
+	}
+	.payment-form-button {
+		background: $lightblue;
+		@include border-radius(4px);
+		color: $white;
+		display: block;
+		font-size: 26px;
+		width: 100%;
+		&:hover,
+		&:active,
+		&:focus {
+			color: $white;
+		}
+	}
+}
