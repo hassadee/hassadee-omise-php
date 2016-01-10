@@ -71,7 +71,7 @@
 								<div class="payment-form-input-addon">
 									<img src="./assets/img/glyphicons-lock.png" class="payment-form-input-addon-icon">
 								</div>
-								<input type="text" data-omise="security_code" size="8" placeholder="CCV" class="form-control payment-form-input" required>
+								<input type="password" data-omise="security_code" size="8" placeholder="CCV" class="form-control payment-form-input" required>
 							</div>
 						</div>
 
