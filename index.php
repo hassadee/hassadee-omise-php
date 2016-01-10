@@ -77,10 +77,14 @@
 
 						<!-- <button type="submit" id="create_token" class="btn payment-form-button">Pay ฿20.00</button> -->
 
-						<input type="submit" id="create_token" class="btn payment-form-button" value="Pay">
+						<input type="submit" id="create_token" class="btn payment-form-button" value="Pay ฿20.00">
 					</form>
 				</section>
 			</article>
+
+			<div class="container">
+				<div id="response"></div>
+			</div>
 
 			<div class="container">
 				<div class="remark">
@@ -101,12 +105,6 @@
 
 		<script type="text/javascript" src="./assets/js/jquery-2.1.3.min.js" charset="utf-8"></script>
 		<script type="text/javascript" src="./assets/js/bootstrap.min.js" charset="utf-8"></script>
-		<script type="text/javascript" src="./assets/js/jquery.placeholder.min.js" charset="utf-8"></script>
-		<script>
-			$(function() {
-				$('input, textarea').placeholder();
-			});
-		</script>
 		
 		<script src="https://cdn.omise.co/omise.js"></script>
 		<script>
@@ -115,6 +113,7 @@
 			$("#checkout").submit(function () {
 				var form = $(this);
 				form.find("input[type=submit]").prop("disabled", true);
+				
 				var card = {
 					"name": form.find("[data-omise=holder_name]").val(),
 					"number": form.find("[data-omise=number]").val(),
@@ -124,15 +123,28 @@
 				};
 
 				Omise.createToken("card", card, function (statusCode, response) {
+					if (response.object == "token") {
+						// $("#response").html("Response ID: "+response.id+"<br>Security Code Check: "+response.card['security_code_check']+"Livemode: "+response.livemode);
+						if (response.card['security_code_check'] == false) {
+							$("#token_errors").html("<div class=\"alert alert-danger\" role=\"alert\">Invalid Security Code (CCV).</div>");
+							form.find("input[type=submit]").prop("disabled", false);
+						}
+					} else {
+						// $("#response").html(response.code+": "+response.message);
+						form.find("input[type=submit]").prop("disabled", false);
+					};
+
 					if (response.object == "error") {
 						$("#token_errors").html("<div class=\"alert alert-danger\" role=\"alert\">" + response.message + "</div>");
 						form.find("input[type=submit]").prop("disabled", false);
 					} else {
-						form.find("[name=omise_token]").val(response.id);
-						// Remove card number from form before submiting to server.
-						form.find("[data-omise=number]").val("");
-						form.find("[data-omise=security_code]").val("");
-						form.get(0).submit();
+						if (response.card['security_code_check'] == true) {
+							form.find("[name=omise_token]").val(response.id);
+							// Remove card number from form before submiting to server.
+							form.find("[data-omise=number]").val("");
+							form.find("[data-omise=security_code]").val("");
+							form.get(0).submit();
+						}
 					};
 				});
 				return false;
