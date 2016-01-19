@@ -130,10 +130,11 @@ figcaption *:last-child {
 	position: relative;
 	margin: 15px auto;
 	padding: 0;
-	width: 290px;
+	width: 310px;
 	.payment-form-group {
 		display: block;
 		margin: 0 0 10px 0;
+		overflow: auto;
 		&:after {
 			@include clearfix();
 		}
@@ -197,7 +198,7 @@ figcaption *:last-child {
 			display: block;
 			float: left;
 			margin: 0 10px 10px 0;
-			width: 143px;
+			width: 163px;
 			.payment-form-input {
 				display: inline;
 				float: left;
@@ -207,12 +208,12 @@ figcaption *:last-child {
 			.payment-form-input-expiry-month {
 				border-right: 0;
 				@include border-radius(3px 0 0 3px);
-				width: 82px;
+				width: 92px;
 			}
 			.payment-form-input-expiry-year {
 				@include border-radius(0 3px 3px 0);
 				padding: 10px 12px;
-				width: 61px;
+				width: 71px;
 			}
 		}
 		.payment-form-security-code {
